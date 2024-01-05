@@ -93,10 +93,10 @@ class SKSBase(ImageProcPythonCommand):
             self.press(Direction(Stick.LEFT, 180), duration=3.2, wait=0.1)
             # TA終了判定
             while True:
-                if self.isContainTemplate('SKS/SV/FlyingTA/clear.png', threshold=0.95, use_gray=True, show_value=self.showTemplateMatchVal):
+                if self.isContainTemplate('SKS/SV/FlyingTA/clear.png', threshold=0.9, use_gray=True, show_value=self.showTemplateMatchVal):
                     c = c + 1
                     break
-                elif self.isContainTemplate('SKS/SV/FlyingTA/fail.png', threshold=0.95, use_gray=True, show_value=self.showTemplateMatchVal):
+                elif self.isContainTemplate('SKS/SV/FlyingTA/fail.png', threshold=0.9, use_gray=True, show_value=self.showTemplateMatchVal):
                     break
             tim = time.time() - time_sta
             n = n + 1
